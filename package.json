@@ -1,0 +1,25 @@
+{
+  "name": "naverdictionary",
+  "version": "1.0.0",
+  "description": "Scrapes the Naver Korean-English Dictionary and provides a REST API for retrieving Korean word information",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choonyongchan/NaverDictionaryTypescript.git"
+  },
+  "author": "Chan Choon Yong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/choonyongchan/NaverDictionaryTypescript/issues"
+  },
+  "homepage": "https://github.com/choonyongchan/NaverDictionaryTypescript#readme",
+  "type": "module",
+  "dependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.13.14",
+    "express": "^4.21.2"
+  }
+}
