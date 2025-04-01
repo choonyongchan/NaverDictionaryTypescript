@@ -1,6 +1,6 @@
 # NaverDictionary Scraper (in Typescript)
 
-![Docker Pulls](https://img.shields.io/docker/pulls/sadlyharry/naverdictionartypescript)
+![Docker Pulls](https://img.shields.io/docker/pulls/sadlyharry/naverdictionarytypescript)
 
 This repository contains the source code for the NaverDictionary microservice, which scrapes the Naver Korean-English Dictionary and provides a REST API for retrieving Korean word information, including translations and additional metadata. This service can be easily deployed via Docker.
 
@@ -20,7 +20,7 @@ cd naverdictionary
 If you prefer to build the Docker image from source, run the following command:
 
 ```bash
-docker build --network=host -t naverdictionarytypescript .
+docker build -t naverdictionarytypescript .
 ```
 
 ### 3. Run the Docker Container
@@ -28,13 +28,13 @@ docker build --network=host -t naverdictionarytypescript .
 To run the service using Docker, execute the following command:
 
 ```bash
-docker run --network=host -p 8080:8080 naverdictionarytypescript:latest
+docker run -p 8080:8080 naverdictionarytypescript:latest
 ```
 
 This will start the REST server at port 8080. If you'd prefer, you can directly download and test the pre-built Docker image available on Docker Hub:
 
 ```bash
-docker run --network=host -p 8080:8080 sadlyharry/naverdictionarytypescript:latest
+docker run -p 8080:8080 sadlyharry/naverdictionarytypescript:latest
 ```
 
 ## API Endpoints
@@ -96,7 +96,15 @@ Retrieve a formatted message suitable for chatbot integration or frontend displa
 
 ## Error Handling
 
-TBC
+In case of an error, the API will respond with a JSON object containing an error message.
+
+- **Example Response:**
+  
+```json
+  {
+    "error": ...
+  }
+```
 
 ## License
 
