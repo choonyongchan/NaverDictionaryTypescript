@@ -1,6 +1,6 @@
-import { NaverScraper } from "./naverScraper";
-import type { DictInfo, EntryInfo, SearchInfo } from "./datastruct";
-import { MsgBuilder } from "./msgBuilder";
+import { NaverScraper } from "./naverScraper.ts";
+import type { DictInfo, EntryInfo, SearchInfo } from "./datastruct.ts";
+import { MsgBuilder } from "./msgBuilder.ts";
 
 
 export class NaverAPI {

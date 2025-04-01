@@ -1,4 +1,4 @@
-import type { DescriptionItem, DictInfo, MeaningItem, SearchInfo } from "./datastruct";
+import type { DescriptionItem, DictInfo, MeaningItem, SearchInfo } from "./datastruct.ts";
 
 export class NaverScraper {
 

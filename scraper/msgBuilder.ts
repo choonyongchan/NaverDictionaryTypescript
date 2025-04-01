@@ -1,4 +1,4 @@
-import type {DictInfo} from './datastruct';
+import type {DictInfo} from './datastruct.ts';
 
 export class MsgBuilder {
 
