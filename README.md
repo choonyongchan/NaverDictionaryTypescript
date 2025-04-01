@@ -12,7 +12,7 @@ To run the NaverDictionary service, follow these steps:
 
 ```bash
 git clone https://github.com/yourusername/naverdictionarytypescript.git
-cd naverdictionary
+cd naverdictionarytypescript
 ```
 
 ### 2. Build the Docker Image
