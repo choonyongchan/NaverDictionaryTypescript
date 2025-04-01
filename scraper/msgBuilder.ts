@@ -1,4 +1,4 @@
-import type {DictInfo} from './datastruct.ts';
+import type {DictInfo} from './datastruct';
 
 export class MsgBuilder {
 
@@ -21,6 +21,12 @@ export class MsgBuilder {
      * @returns A message built from the Word Information
      */
     public static build(dictInfo: DictInfo): string {
+        // Check if all fields are empty
+        if (!dictInfo) {return '';}
+        if (Object.values(dictInfo).every(value => !value || value == '')) {
+            return '';
+        }
+
         const parts: string[] = [
             this.buildSentence('', [dictInfo.TopikLevel, dictInfo.ImportanceLevel]),
             this.buildSentence('', [dictInfo.Title, dictInfo.Hanja]),

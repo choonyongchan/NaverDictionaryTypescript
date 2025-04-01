@@ -1,6 +1,6 @@
-import { NaverScraper } from "./naverScraper.ts";
-import type { DictInfo, EntryInfo, SearchInfo } from "./datastruct.ts";
-import { MsgBuilder } from "./msgBuilder.ts";
+import { NaverScraper } from "./naverScraper";
+import type { DictInfo, EntryInfo, SearchInfo } from "./datastruct";
+import { MsgBuilder } from "./msgBuilder";
 
 
 export class NaverAPI {
@@ -108,11 +108,7 @@ export class NaverAPI {
      * @returns The dictionary information of the term
      */
     public static async get(term: string): Promise<DictInfo> {
-        const termSanitised: string = NaverAPI.sanitise(term);
-        const entryInfo: EntryInfo = await NaverAPI.getEntryInfo(termSanitised);
-
-        const entryId: string = NaverAPI.getEntryId(entryInfo);
-        const searchInfo: SearchInfo = await NaverAPI.getSearchInfo(entryId);
+        const searchInfo: SearchInfo = await NaverAPI.getSearchInfoRaw(term);
         return NaverScraper.scrape(searchInfo);
     }
 
